@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section[id]');
@@ -116,5 +115,4 @@ document.addEventListener("DOMContentLoaded", function () {
         e.stopPropagation();
         navBar.style.left = "0%";
     });
->>>>>>> f4cdc180b7401c43247f3758fd01c6591d6a1587
 });
