@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 @font-face {
     font-family: 'circle';
@@ -160,4 +161,168 @@
     content: '\e900';
     font-family: 'facebook';
     display: block;
+=======
+
+@font-face {
+    font-family: 'circle';
+    src: url('assets/circle/fonts/icomoon.woff') format('woff');
+}
+@font-face {
+    font-family: 'triangle';
+    src: url('assets/triangle/fonts/icomoon.woff') format('woff');
+}
+@font-face {
+    font-family: 'square';
+    src: url('assets/square/fonts/icomoon.woff') format('woff');
+}
+@font-face {
+    font-family: 'logo';
+    src: url('assets/logo/fonts/icomoon.woff') format('woff');
+}
+@font-face {
+    font-family: 'arrow';
+    src: url('assets/arrow/fonts/icomoon.woff') format('woff');
+}
+@font-face {
+    font-family: 'js';
+    src: url('assets/js/fonts/icomoon.woff') format('woff');
+}
+@font-face {
+    font-family: 'python';
+    src: url('assets/python/fonts/icomoon.woff') format('woff');
+}
+@font-face {
+    font-family: 'css';
+    src: url('assets/css/fonts/icomoon.woff') format('woff');
+}
+@font-face {
+    font-family: 'html';
+    src: url('assets/html/fonts/icomoon.woff') format('woff');
+}
+@font-face {
+    font-family: 'node';
+    src: url('assets/node/fonts/icomoon.woff') format('woff');
+}
+@font-face {
+    font-family: '3d';
+    src: url('assets/3d/fonts/icomoon.woff') format('woff');
+}
+@font-face {
+    font-family: 'graphic';
+    src: url('assets/graphic/fonts/icomoon.woff') format('woff');
+}
+@font-face {
+    font-family: 'motion';
+    src: url('assets/motion/fonts/icomoon.woff') format('woff');
+}
+@font-face {
+    font-family: 'ad';
+    src: url('assets/ad/fonts/icomoon.woff') format('woff');
+}
+@font-face {
+    font-family: 'video';
+    src: url('assets/video/fonts/icomoon.woff') format('woff');
+}
+@font-face {
+    font-family: 'web';
+    src: url('assets/web/fonts/icomoon.woff') format('woff');
+}
+@font-face {
+    font-family: 'pic';
+    src: url('assets/pic/fonts/icomoon.woff') format('woff');
+}
+@font-face {
+    font-family: 'facebook';
+    src: url('assets/facebook/fonts/icomoon.woff') format('woff');
+}
+.circle:before{
+    content: '\e900';
+    font-family: 'circle';
+    display: block;
+}
+.triangle:before{
+    content: '\e900';
+    font-family: 'triangle';
+    display: block;
+}
+.square:before{
+    content: '\e900';
+    font-family: 'square';
+    display: block;
+}
+.logo:before{
+    content: '\e900';
+    font-family: 'logo';
+    display: block;
+}
+.arrow:before{
+    content: '\e900';
+    font-family: 'arrow';
+    display: block;
+}
+.js:before{
+    content: '\e900';
+    font-family: 'js';
+    display: block;
+}
+.node:before{
+    content: '\e900';
+    font-family: 'node';
+    display: block;
+}
+.html:before{
+    content: '\e900';
+    font-family: 'html';
+    display: block;
+}
+.css:before{
+    content: '\e900';
+    font-family: 'css';
+    display: block;
+}
+.python:before{
+    content: '\e900';
+    font-family: 'python';
+    display: block;
+}
+.ad:before{
+    content: '\e900';
+    font-family: 'ad';
+    display: block;
+}
+.graphic:before{
+    content: '\e900';
+    font-family: 'graphic';
+    display: block;
+}
+.video:before{
+    content: '\e900';
+    font-family: 'video';
+    display: block;
+}
+.web:before{
+    content: '\e900';
+    font-family: 'web';
+    display: block;
+}
+.motion:before{
+    content: '\e900';
+    font-family: 'motion';
+    display: block;
+}
+.td:before{
+    content: '\e900';
+    font-family: '3d';
+    display: block;
+}
+.pic:before{
+    content: '\e900';
+    font-family: 'pic';
+    display: block;
+}
+.facebook:before{
+    content: '\e900';
+    font-family: 'facebook';
+    display: block;
+>>>>>>> f4cdc180b7401c43247f3758fd01c6591d6a1587
 }
