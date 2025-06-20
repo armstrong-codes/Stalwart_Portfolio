@@ -368,6 +368,10 @@
         document.querySelector('.project .triangle').classList.add('white_shape_night');
         document.querySelector('.project .square').classList.add('white_shape_night');
         document.querySelector('.project .circle').classList.add('black_shape_night');
+        document.querySelectorAll('.navbar_links ul li').forEach(navancor => {
+            navancor.style.color = "#fff";
+        });
+        document.querySelector('.navbar_links ul').style.backgroundColor = "#3d3c3aa9";
     });
     
     dayButton.addEventListener('click', function () {
@@ -408,6 +412,9 @@
         document.querySelector('.project .triangle').classList.remove('white_shape_night');
         document.querySelector('.project .square').classList.remove('white_shape_night');
         document.querySelector('.project .circle').classList.remove('black_shape_night');
+        document.querySelectorAll('.navbar_links ul li').forEach(navancor => {
+            navancor.style.color = "#000";
+        });
     });
     
     openPicture.forEach(buton => {
