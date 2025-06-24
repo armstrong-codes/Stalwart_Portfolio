@@ -1001,9 +1001,10 @@ nav .navbar_logo{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 80px 60px 80px 60px;
+    padding: 100px 60px 100px 60px;
     gap: 40px;
     scroll-margin-top: 60px;
+    overflow: hidden;
 }
 .contact .line{
     position: relative;
