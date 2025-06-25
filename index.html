@@ -27,6 +27,7 @@
             <ul>
                 <button class="close_nav"><i class="fa-solid fa-xmark"></i></button>
                 <li><a href="#about" class="nav-link" data-section="about" ><span class="logo"></span>About<span class="logo"></span></a></li>
+                <li><a href="#education" class="nav-link" data-section="education" ><span class="logo"></span>Education<span class="logo"></span></a></li>
                 <li><a href="#service" class="nav-link" data-section="service" ><span class="logo"></span>Service<span class="logo"></span></a></li>
                 <li><a href="#project" class="nav-link" data-section="project" ><span class="logo"></span>Project<span class="logo"></span></a></li>
                 <li><a href="#contact" class="nav-link" data-section="contact" ><span class="logo"></span>Contact<span class="logo"></span></a></li>
@@ -76,6 +77,51 @@
             <span class="triangle" id="t1"></span>
             <span class="triangle" id="t2"></span>
             <span class="square" id="s2"></span>
+        </div>
+    </section>
+    <section id="education" class="education">
+        <div class="shapes">
+            <span class="circle"></span>
+            <span class="square"></span>
+            <span class="triangle"></span>
+        </div>
+        <span class="snippet" data-aos="fade-up">my education</span>
+        <div class="context">
+            <h1 data-aos="fade-up">Educational Qualifications</h1>
+            <p data-aos="fade-up">A foundation built on curiosity and critical thinking. My academic journey has shaped my problem-solving skills and passion for continuous learning in technology and design.</p>
+        </div>
+        <div class="educate_circle">
+            <div class="university_card">
+                <div class="years">2024 <span class="logo"></span> 2027</div>
+                <h1>african leadership <br> university</h1>
+                <p>university</p>
+            </div>
+            <div class="primary_card">
+                <div class="years">2011 <span class="logo"></span> 2016</div>
+                <h1>SOS PRIMARY SCHOOL</h1>
+                <p>PRIMARY SCHOOL</p>
+            </div>
+            <div class="secondary_card">
+                <div class="years">2018 <span class="logo"></span> 2023</div>
+                <h1>glory academy</h1>
+                <p>high school</p>
+            </div>
+        </div>
+        <div class="slide_buttons" data-aos="fade-up">
+            <div class="button" id="primary_button">
+                <button><span class="logo"></span></button>
+                <p>primary school</p>
+            </div>
+            <div class="line"></div>
+            <div class="button" id="secondary_button">
+                <button><span class="logo"></span></button>
+                <p>secondary school</p>
+            </div>
+            <div class="line"></div>
+            <div class="button" id="university">
+                <button><span class="logo"></span></button>
+                <p>university</p>
+            </div>
         </div>
     </section>
     <section id="service" class="service">
@@ -322,6 +368,104 @@
     const bodyPart = document.querySelector('body');
     const aboutPart = document.querySelector(".about");
     const snippet = document.querySelector(".about .snippet");
+    const educationCircle = document.querySelector(".educate_circle");
+    const primButton = document.querySelector("#primary_button");
+    const univP = document.querySelector(".university_card p");
+    const univh = document.querySelector(".university_card h1");
+    const primP = document.querySelector(".primary_card p");
+    const primh = document.querySelector(".primary_card h1");
+    const secP = document.querySelector(".secondary_card p");
+    const sech = document.querySelector(".secondary_card h1");
+    const secButton = document.querySelector("#secondary_button");
+    const univButton = document.querySelector("#university");
+
+    // cardButton.forEach(card => {
+    //     card.addEventListener('mouseover', function () {
+    //         this.classList.toggle("transformY");
+    //     })
+    // });
+
+    window.addEventListener('load', () => {
+        educationCircle.style.transform = "rotate(-90deg)";
+        primButton.classList.add("button_active");
+        univButton.classList.remove("button_active");
+        secButton.classList.remove("button_active");
+        univP.style.opacity = "0";
+        univP.style.transform = "translateY(-36px)";
+        univh.style.transform = "translateY(-20px)";
+        univh.style.opacity = "0";
+        secP.style.opacity = "0";
+        secP.style.transform = "translateY(-36px)";
+        sech.style.transform = "translateY(-20px)";
+        sech.style.opacity = "0";
+        setTimeout(() => {
+            primP.style.opacity = "1";
+            primP.style.transform = "translateY(0px)";
+            primh.style.transform = "translateY(0px)";
+            primh.style.opacity = "1";
+        }, 1200);
+    });
+
+    primButton.addEventListener("click", function () {
+        educationCircle.style.transform = "rotate(-90deg)";
+        primButton.classList.add("button_active");
+        univButton.classList.remove("button_active");
+        secButton.classList.remove("button_active");
+        univP.style.opacity = "0";
+        univP.style.transform = "translateY(-36px)";
+        univh.style.transform = "translateY(-20px)";
+        univh.style.opacity = "0";
+        secP.style.opacity = "0";
+        secP.style.transform = "translateY(-36px)";
+        sech.style.transform = "translateY(-20px)";
+        sech.style.opacity = "0";
+        setTimeout(() => {
+            primP.style.opacity = "1";
+            primP.style.transform = "translateY(0px)";
+            primh.style.transform = "translateY(0px)";
+            primh.style.opacity = "1";
+        }, 1200);
+    })
+    secButton.addEventListener("click", function () {
+        educationCircle.style.transform = "rotate(0deg)";
+        primButton.classList.remove("button_active");
+        univButton.classList.remove("button_active");
+        secButton.classList.add("button_active");
+        univP.style.opacity = "0";
+        univP.style.transform = "translateY(-36px)";
+        univh.style.transform = "translateY(-20px)";
+        univh.style.opacity = "0";
+        primP.style.opacity = "0";
+        primP.style.transform = "translateY(-36px)";
+        primh.style.transform = "translateY(-20px)";
+        primh.style.opacity = "0";
+        setTimeout(() => {
+            secP.style.opacity = "1";
+            secP.style.transform = "translateY(0px)";
+            sech.style.transform = "translateY(0px)";
+            sech.style.opacity = "1";
+        }, 1200);
+    });
+    univButton.addEventListener("click", function () {
+        educationCircle.style.transform = "rotate(90deg)";
+        primButton.classList.remove("button_active");
+        secButton.classList.remove("button_active");
+        univButton.classList.add("button_active");
+        secP.style.opacity = "0";
+        secP.style.transform = "translateY(-36px)";
+        sech.style.transform = "translateY(-20px)";
+        sech.style.opacity = "0";
+        primP.style.opacity = "0";
+        primP.style.transform = "translateY(-36px)";
+        primh.style.transform = "translateY(-20px)";
+        primh.style.opacity = "0";
+        setTimeout(() => {
+            univP.style.opacity = "1";
+            univP.style.transform = "translateY(0px)";
+            univh.style.transform = "translateY(0px)";
+            univh.style.opacity = "1";
+        }, 1200);
+    })
 
     whatWeDo.addEventListener("click", function (e) {
         e.preventDefault();
@@ -334,6 +478,14 @@
     })
     
     nightButton.addEventListener('click', function () {
+        document.querySelectorAll('.education .slide_buttons .line').forEach(line => {
+            line.style.border = "1px solid #7a7a7a";
+            line.style.borderStyle = "dashed";
+        })
+        document.querySelector('.education .context h1').style.color = "#cfcfcf";
+        document.querySelectorAll('.education .educate_circle h1').forEach(head => {
+            head.style.color = "#cfcfcf";
+        });
         indicator.style.transform = "translateX(35px)";
         nightButton.classList.add('active');
         dayButton.classList.remove('active');
@@ -348,34 +500,55 @@
         document.querySelector('.about #t2').classList.add('white_shape_night');
         document.querySelector('.about #s2').classList.add('black_shape_night');
         document.querySelector('.service h1').style.color = "#cfcfcf";
+        document.querySelector('.service .shapes .square').style.color = "#000";
+        document.querySelector('.service .shapes .circle').style.color = "#fff";
+        document.querySelector('.service .shapes .triangle').style.color = "#fff";
         document.querySelectorAll('.service .card').forEach(card => {
             card.classList.add('night_card');
         });
-        document.querySelectorAll('.service .card h1').forEach(cardTitle => {
-            cardTitle.style.color = "#999999";
+        document.querySelector('.contact').style.backgroundColor = "#f0a801";
+        document.querySelector('.contact .texts .snippet').style.border = "1px solid #fff";
+        document.querySelector('.contact .texts .snippet').style.color = "#fff";
+        document.querySelector('.contact .texts h1').style.color = "#fff";
+        document.querySelector('.contact .texts p').style.color = "#fff";
+        document.querySelector('.contact .texts .info_buttons .email_button').classList.add("info_button_night");
+        document.querySelector('.contact .texts .info_buttons .phone_button').classList.add("info_button_night");
+        document.querySelector('.contact .line').style.backgroundColor = "#ffffff46";
+        document.querySelectorAll('.contact .form_holder form input').forEach(input => {
+            input.classList.add("input_night");
         });
-        document.querySelector('.project').classList.add('night_project');
-        document.querySelector('.footer').style.backgroundColor = "#f0a801";
-        document.querySelector('.footer .logo').style.color = "#000";
+        document.querySelector('.contact .form_holder form .right_side textarea').classList.add("input_night");
+        document.querySelector('.contact .form_holder form .left_side button').classList.add("button_night");
+        document.querySelector('.contact').style.backgroundColor = "#f0a801";
+        document.querySelector('.footer').style.backgroundColor = "#99999900";
+        document.querySelector('.footer .logo').style.color = "#fff";
+        document.querySelector('.footer .logo_holder h1').style.color = "#fff";
         document.querySelectorAll('.footer ul li a').forEach(ancor => {
-            ancor.style.color = "#000";  
+            ancor.style.color = "#fff";  
         });
         document.querySelectorAll('.footer .media a').forEach(media => {
-            media.style.color = "#000";  
+            media.style.color = "#fff";  
         });
-        document.querySelector('.contact .texts h1').style.color = "#cfcfcf";
-        document.querySelector('.project .snippet').classList.add('snippet_night');
-        document.querySelector('.project .context h1').style.color = "#fff";
-        document.querySelector('.project .context p').style.color = "#fff";
-        document.querySelector('.project .triangle').classList.add('white_shape_night');
-        document.querySelector('.project .square').classList.add('white_shape_night');
-        document.querySelector('.project .circle').classList.add('black_shape_night');
+        document.querySelector('.project .context h1').style.color = "#cfcfcf";
         document.querySelectorAll('.navbar_links ul li').forEach(navancor => {
             navancor.style.color = "#fff";
         });
+        document.querySelector('.service').style.backgroundColor = "#f0a801";
+        document.querySelector('.service .snippet').style.color = "#fff";
+        document.querySelector('.service .snippet').style.border = "1px solid #fff";
+        document.querySelector('.service .context h1').style.color = "#fff";
+        document.querySelector('.service .context p').style.color = "#fff";
     });
     
     dayButton.addEventListener('click', function () {
+        document.querySelectorAll('.education .slide_buttons .line').forEach(line => {
+            line.style.border = "1.4px solid #e6e6e6";
+            line.style.borderStyle = "dashed";
+        })
+        document.querySelector('.education .context h1').style.color = "#000";
+        document.querySelectorAll('.education .educate_circle h1').forEach(head => {
+            head.style.color = "#000";
+        });
         indicator.style.transform = "translateX(0px)";
         dayButton.classList.add('active');
         nightButton.classList.remove('active');
@@ -389,30 +562,51 @@
         document.querySelector('.about #t1').classList.remove('white_shape_night');
         document.querySelector('.about #t2').classList.remove('white_shape_night');
         document.querySelector('.about #s2').classList.remove('black_shape_night');
-        document.querySelector('.service h1').style.color = "#000";
         document.querySelectorAll('.service .card').forEach(card => {
             card.classList.remove('night_card');
         });
+        document.querySelector('.service').style.backgroundColor = "#fff";
+        document.querySelector('.service .snippet').style.color = "#F0A901";
+        document.querySelector('.service .snippet').style.border = "1px solid #F0A901";
+        document.querySelector('.service .context h1').style.color = "#000";
+        document.querySelector('.service .context p').style.color = "#999999";
+        document.querySelector('.service .shapes .square').style.color = "#999999";
+        document.querySelector('.service .shapes .circle').style.color = "#f0a801";
+        document.querySelector('.service .shapes .triangle').style.color = "#f0a801";
         document.querySelectorAll('.service .card h1').forEach(cardTitle => {
             cardTitle.style.color = "#000";
         });
         document.querySelector('.project').classList.remove('night_project');
-        document.querySelector('.footer').style.backgroundColor = "#fff";
         document.querySelector('.footer .logo').style.color = "#f0a801";
+        document.querySelector('.footer .logo_holder h1').style.color = "#000";
+        document.querySelectorAll('.footer ul li a').forEach(ancor => {
+            ancor.style.color = "#000";  
+        });
+        document.querySelectorAll('.footer .media a').forEach(media => {
+            media.style.color = "#000";  
+        });
         document.querySelectorAll('.footer ul li').forEach(ancor => {
             ancor.style.color = "#999999";
         });
         document.querySelectorAll('.footer .media a').forEach(media => {
             media.style.color = "#999999";
         });
+        document.querySelector('.contact').style.backgroundColor = "#fff";
+        document.querySelector('.contact .texts .snippet').style.border = "1px solid #f0a801";
+        document.querySelector('.contact .texts .snippet').style.color = "#f0a801";
         document.querySelector('.contact .texts h1').style.color = "#000";
+        document.querySelector('.contact .texts p').style.color = "#999999";
+        document.querySelector('.contact .texts .info_buttons .email_button').classList.remove("info_button_night");
+        document.querySelector('.contact .texts .info_buttons .phone_button').classList.remove("info_button_night")
+        document.querySelector('.contact .line').style.backgroundColor = "#99999946";
+        document.querySelectorAll('.contact .form_holder form input').forEach(input => {
+            input.classList.remove("input_night");
+        });
+        document.querySelector('.contact .form_holder form .right_side textarea').classList.remove("input_night");
+        document.querySelector('.contact .form_holder form .left_side button').classList.remove("button_night");
         document.querySelector('.project .snippet').classList.remove('snippet_night');
         document.querySelector('.project .context h1').style.color = "#000";
         document.querySelector('.project .context p').style.color = "#999999";
-        document.querySelector('.project .triangle').classList.remove('white_shape_night');
-        document.querySelector('.project .triangle').classList.remove('white_shape_night');
-        document.querySelector('.project .square').classList.remove('white_shape_night');
-        document.querySelector('.project .circle').classList.remove('black_shape_night');
         document.querySelectorAll('.navbar_links ul li').forEach(navancor => {
             navancor.style.color = "#000";
         });

@@ -176,10 +176,6 @@ nav .navbar_right .coffee i{
     pointer-events: none;
     transition: 0.3s ease-in-out;
 }
-/* nav .navbar_right .coffee:hover i{
-    background-color: var(--white);
-    color: var(--primary-color);
-} */
 nav .navbar_right .coffee p{
     font-size: 10px;
     font-weight: 120;
@@ -319,8 +315,9 @@ nav .navbar_logo{
     border: none;
     color: var(--white);
     border-radius: 6px;
-    box-shadow: 0px 10px 20px -2px #f0a801dd;
+    box-shadow: 0px 10px 20px -7px #f0a801dd;
     cursor: pointer;
+    overflow: hidden;
     transition: 0.3s ease-in-out;
 }
 .content button:hover{
@@ -371,6 +368,7 @@ nav .navbar_logo{
     z-index: 1;
     scroll-margin-top: 80px;
     transition: 0.3s ease-in-out;
+    overflow: hidden;
 }
 .about .snippet{
     font-size: 8px;
@@ -400,6 +398,7 @@ nav .navbar_logo{
     box-shadow: 0px 10px 20px -2px #ffffffdd !important;
 }
 .about button{
+    position: relative;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -412,8 +411,9 @@ nav .navbar_logo{
     border: none;
     color: var(--white);
     border-radius: 6px;
-    box-shadow: 0px 10px 20px -2px #f0a801dd;
+    box-shadow: 0px 12px 20px -7px #f0a801dd;
     cursor: pointer;
+    overflow: hidden;
     transition: 0.3s ease-in-out;
 }
 .about button:hover{
@@ -427,12 +427,6 @@ nav .navbar_logo{
     align-items: center;
     justify-content: center;
     z-index: -1;
-}
-.white_shape_night{
-    color: white !important;
-}
-.black_shape_night{
-    color: rgb(0, 0, 0) !important;
 }
 .about .shapes #t1{
     position: absolute;
@@ -461,6 +455,361 @@ nav .navbar_logo{
     color: #999999;
     transition: 0.3s ease-in-out;
 }
+.about .line_holder{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.about .line_holder .lines{
+    position: relative;
+    width: 30%;
+    height: 1px;
+    background-color: #d7d7d7;
+}
+.about .line_holder span{
+    color: #d7d7d7;
+}
+.education{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 80px 0px 80px 0px;
+    /* background-color: var(--white); */
+    z-index: 1;
+    scroll-margin-top: 60px;
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+}
+.education .snippet{
+    font-size: 8px;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    border: 1px solid #f0a801;
+    padding: 8px 24px 8px 24px;
+    color: #f0a801;
+    border-radius: 30px;
+}
+.education .context{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.education .context h1{
+    font-family: 'italiana';
+    text-transform: capitalize;
+    letter-spacing: 5px;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 40px;
+    transition: 0.3s ease-in-out;
+}
+.education .context P{
+    text-align: center;
+    line-height: 20px;
+    font-weight: 200;
+    font-size: 11px;
+    letter-spacing: 1px;
+    width: 70%;
+    text-transform: capitalize;
+    color: var(--secondary-color);
+}
+.education .educate_circle{
+    position: absolute;
+    top: -1380px;
+    border: 1.5px solid rgb(212, 210, 210);
+    border-style: dashed;
+    width: 1800px;
+    height: 1800px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-90deg);
+    z-index: -1;
+    transition: 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+}
+.education .educate_circle .university_card{
+    position: absolute;
+    right: -13.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    transform: rotate(-90deg);
+}
+.education .educate_circle .university_card h1{
+    font-family: 'italiana';
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 22px;
+    letter-spacing: 10px;
+    line-height: 26px;
+    text-align: center;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.education .educate_circle .university_card p{
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #999999;
+    transform: translateY(-36px);
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+.education .educate_circle .university_card.card_active h1{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.education .educate_circle .university_card.card_active p{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.education .educate_circle .university_card .years{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 4px;
+    font-family: 'inter';
+    font-weight: 200;
+    font-size: 10px;
+    background-color: #f0a801;
+    padding: 12px 24px;
+    border-radius: 5px;
+    color: white;
+    overflow: hidden;
+}
+.education .educate_circle .university_card .years span{
+    font-size: 8px;
+}
+.education .educate_circle .primary_card{
+    position: absolute;
+    left: -13.2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    transform: rotate(90deg);
+}
+.education .educate_circle .primary_card h1{
+    font-family: 'italiana';
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 22px;
+    letter-spacing: 10px;
+    text-align: center;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.education .educate_circle .primary_card p{
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #999999;
+    transform: translateY(-36px);
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+.education .educate_circle .primary_card.card_active h1{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.education .educate_circle .primary_card.card_active p{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.education .educate_circle .primary_card .years{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 4px;
+    font-family: 'inter';
+    font-weight: 200;
+    font-size: 10px;
+    background-color: #f0a801;
+    padding: 12px 24px;
+    border-radius: 5px;
+    color: white;
+    overflow: hidden;
+}
+.education .educate_circle .primary_card .years span{
+    font-size: 8px;
+}
+.education .educate_circle .secondary_card{
+    position: absolute;
+    bottom: -95px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.education .educate_circle .secondary_card h1{
+    font-family: 'italiana';
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 22px;
+    letter-spacing: 10px;
+    text-align: center;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.education .educate_circle .secondary_card p{
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #999999;
+    transform: translateY(-36px);
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+.education .educate_circle .secondary_card.card_active h1{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.education .educate_circle .secondary_card.card_active p{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.education .educate_circle .secondary_card .years{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 4px;
+    font-family: 'inter';
+    font-weight: 200;
+    font-size: 10px;
+    background-color: #f0a801;
+    padding: 12px 24px;
+    border-radius: 5px;
+    color: white;
+    overflow: hidden;
+}
+.education .educate_circle .secondary_card .years span{
+    font-size: 8px;
+}
+.education .slide_buttons{
+    margin-top: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    gap: 50px;
+}
+.education .slide_buttons .button{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.education .slide_buttons .button button{
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: #f0a801;
+    box-shadow: 0px 12px 14px -4px #f0a801dd;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.education .slide_buttons .button button:hover{
+    transform: translateY(-14px) rotate(15deg);
+}
+.education .slide_buttons .button.button_active button{
+    transform: translateY(-14px) rotate(15deg);
+}
+.education .slide_buttons .button.button_active p{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.education .slide_buttons .button p{
+    position: absolute;
+    top: 110%;
+    font-size: 9px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 13px;
+    color: var(--secondary-color);
+    opacity: 0;
+    transform: translateY(-4px);
+    pointer-events: none;
+    transition: 0.2s ease-in-out;
+}
+.education .slide_buttons .button:hover p{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.education .slide_buttons .line{
+    position: relative;
+    width: 60%;
+    height: 1px;
+    border: 1.4px solid #e6e6e6;
+    border-style: dashed;
+}
+.education .shapes{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
+.education .shapes .circle{
+    position: absolute;
+    top: 30%;
+    left: 12%;
+    transform: rotate(-35deg);
+    font-size: 12px;
+    color: #f0a801;
+    transition: 0.3s ease-in-out;
+}
+.education .shapes .square{
+    position: absolute;
+    bottom: 24%;
+    right: 22%;
+    transform: rotate(15deg);
+    font-size: 18px;
+    color: #f0a801;
+    transition: 0.3s ease-in-out;
+}
+.education .shapes .triangle{
+    position: absolute;
+    top: 20%;
+    right: 18%;
+    transform: rotate(20deg);
+    font-size: 16px;
+    color: #999999;
+    transition: 0.3s ease-in-out;
+}
+.white_shape_night{
+    color: white !important;
+}
+.black_shape_night{
+    color: rgb(0, 0, 0) !important;
+}
 .service{
     position: relative;
     display: flex;
@@ -469,8 +818,10 @@ nav .navbar_logo{
     justify-content: center;
     gap: 40px;
     padding: 80px 0px 80px 0px;
+    background-color: var(--white);
     z-index: 1;
     scroll-margin-top: 60px;
+    overflow: hidden;
 }
 .service .snippet{
     font-size: 8px;
@@ -481,6 +832,7 @@ nav .navbar_logo{
     padding: 8px 24px 8px 24px;
     color: #f0a801;
     border-radius: 30px;
+    transition: 0.3s ease-in-out;
 }
 .service .context{
     display: flex;
@@ -508,6 +860,7 @@ nav .navbar_logo{
     width: 70%;
     text-transform: capitalize;
     color: var(--secondary-color);
+    transition: 0.3s ease-in-out;
 }
 .service .card_holder{
     position: relative;
@@ -521,13 +874,51 @@ nav .navbar_logo{
 }
 .night_card{
     background-color: #ffffff00 !important;
-    border: 1px solid #999999 !important;
+    border: 1px solid #ffffff91 !important;
+}
+.service .card_holder .card.night_card .text h1{
+    color: var(--white) !important;
+}
+.service .card_holder .card.night_card .text h1 span{
+    color: var(--white) !important;
+}
+.service .card_holder .card.night_card p{
+    color: var(--white) !important;
+}
+.service .card_holder .card.night_card .icon{
+    background-color: var(--white);
+    box-shadow: 0px 10px 14px -4px #fff;
+    transform: rotate(12deg);
+}
+.service .card_holder .card.night_card .icon span{
+    color: var(--primary-color);
+}
+.service .card_holder .card.night_card:hover{
+    border: 1px solid #37282800 !important;
+    background-color: var(--white) !important;
+}
+.service .card_holder .card.night_card:hover .text h1{
+    color: var(--secondary-color) !important;
+}
+.service .card_holder .card.night_card:hover .text h1 span{
+    color: var(--secondary-color) !important;
+}
+.service .card_holder .card.night_card:hover p{
+    color: var(--secondary-color) !important;
+}
+.service .card_holder .card.night_card:hover .icon{
+    background-color: var(--primary-color);
+    transform: rotate(0deg);
+    box-shadow: 0px 10px 18px -2px var(--primary-color);
+}
+.service .card_holder .card.night_card:hover .icon span{
+    color: var(--white);
 }
 .service .card_holder .card{
     position: relative;
     width: 280px;
     height: 220px;
-    background-color: var(--white);
+    /* background-color: var(--white); */
     border-radius: 12px;
     padding: 20px 20px 20px 30px;
     display: flex;
@@ -535,23 +926,17 @@ nav .navbar_logo{
     justify-content: start;
     align-items: start;
     gap: 20px;
-    border: 1px solid #37282800;
+    border: 1px solid #3535352a;
     z-index: 1;
     transition: 0.3s ease-in-out;
     cursor: pointer;
     overflow: hidden;
 }
 .service .card_holder .card:hover{
+    border: 1px solid #fdfdfd2a;
     transform: translateY(-10px);
     background-color: var(--primary-color);
     box-shadow: 0px 30px 30px -18px #f0a801;
-}
-.card.night_card:hover{
-    border: 1px solid #37282800 !important;
-    background-color: var(--primary-color) !important;
-}
-.card.night_card:hover h1{
-    color: var(--white) !important;
 }
 .service .card_holder .card .icon{
     position: relative;
@@ -565,6 +950,7 @@ nav .navbar_logo{
     border-radius: 8px;
     box-shadow: 0px 10px 14px -4px #f0a801;
     transform: rotate(12deg);
+    overflow: hidden;
     transition: 0.3s ease-in-out;
 }
 .service .card_holder .card:hover .icon{
@@ -672,6 +1058,7 @@ nav .navbar_logo{
     transform: rotate(20deg);
     color: #999999;
     font-size: 20px;
+    transition: 0.3s ease-in-out;
 }
 .service .shapes .circle{
     position: absolute;
@@ -680,6 +1067,7 @@ nav .navbar_logo{
     transform: rotate(20deg);
     color: #f0a801;
     font-size: 12px;
+    transition: 0.3s ease-in-out;
 }
 .service .shapes .triangle{
     position: absolute;
@@ -688,6 +1076,7 @@ nav .navbar_logo{
     transform: rotate(20deg);
     color: #f0a801;
     font-size: 14px;
+    transition: 0.3s ease-in-out;
 }
 .night_project{
     background-color: var(--primary-color) !important;
@@ -700,10 +1089,11 @@ nav .navbar_logo{
     justify-content: center;
     gap: 40px;
     padding: 80px 0px 80px 0px;
-    background-color: var(--white);
+    /* background-color: var(--white); */
     z-index: 1;
     scroll-margin-top: 60px;
     transition: 0.3s ease-in-out;
+    overflow: hidden;
 }
 .project .snippet{
     font-size: 8px;
@@ -1002,6 +1392,7 @@ nav .navbar_logo{
     align-items: center;
     justify-content: space-between;
     padding: 100px 60px 100px 60px;
+    background-color: var(--white);
     gap: 40px;
     scroll-margin-top: 60px;
     overflow: hidden;
@@ -1011,6 +1402,7 @@ nav .navbar_logo{
     width: 1px;
     height: 200px;
     background-color: #99999946;
+    transition: 0.3s ease-in-out;
 }
 .contact .shapes{
     position: absolute;
@@ -1050,6 +1442,7 @@ nav .navbar_logo{
     width: 70%;
     text-transform: capitalize;
     color: var(--secondary-color);
+    transition: 0.3s ease-in-out;
 }
 .contact .texts .info_buttons{
     display: flex;
@@ -1059,7 +1452,7 @@ nav .navbar_logo{
 }
 .contact .texts .info_buttons .email_button{
     position: relative;
-    border: none;
+    border: 1px solid #ffffff00;
     background: transparent;
     display: flex;
     align-items: center;
@@ -1068,10 +1461,32 @@ nav .navbar_logo{
     height: 40px;
     border-radius: 30px;
     padding: 4px;
-    transition: 0.3s ease-in-out 0.2s;
+    transition: 0.3s ease-in-out 0.1s;
     box-shadow: 0px 10px 14px -4px #f0a80100;
     cursor: pointer;
     overflow: hidden;
+}
+.contact .texts .info_buttons .email_button.info_button_night span{
+    border: 1px solid #ffffff00;
+    background-color: #fff;
+    color: #f0a801;
+}
+.contact .texts .info_buttons .email_button.info_button_night{
+    border: 1px solid #ffffff00;
+}
+.contact .texts .info_buttons .email_button.info_button_night:hover{
+    border: 1px solid #fff;
+}
+.contact .texts .info_buttons .phone_button.info_button_night{
+    border: 1px solid #ffffff00;
+}
+.contact .texts .info_buttons .phone_button.info_button_night span{
+    border: 1px solid #ffffff00;
+    background-color: #fff;
+    color: #f0a801;
+}
+.contact .texts .info_buttons .phone_button.info_button_night:hover{
+    border: 1px solid #fff;
 }
 .contact .texts .info_buttons .email_button:hover{
     background-color: var(--primary-color);
@@ -1109,7 +1524,7 @@ nav .navbar_logo{
 }
 .contact .texts .info_buttons .phone_button{
     position: relative;
-    border: none;
+    border: 1px solid #ffffff00;
     background: transparent;
     display: flex;
     align-items: center;
@@ -1118,7 +1533,7 @@ nav .navbar_logo{
     height: 40px;
     border-radius: 30px;
     padding: 4px;
-    transition: 0.3s ease-in-out 0.2s;
+    transition: 0.3s ease-in-out 0.1s;
     box-shadow: 0px 10px 14px -4px #f0a80100;
     cursor: pointer;
     overflow: hidden;
@@ -1185,6 +1600,13 @@ nav .navbar_logo{
     letter-spacing: 1px;
     background: none;
 }
+.contact .form_holder form .left_side input.input_night{
+    border: 1px solid #fff;
+    color: #fff;
+}
+.contact .form_holder form .left_side input.input_night::placeholder{
+    color: #fff;
+}
 .contact .form_holder form .left_side input::placeholder{
     font-size: 10px;
     letter-spacing: 1px;
@@ -1203,9 +1625,15 @@ nav .navbar_logo{
     border: none;
     color: var(--white);
     border-radius: 6px;
-    box-shadow: 0px 10px 20px -2px #f0a801dd;
+    box-shadow: 0px 10px 20px -7px #f0a801dd;
     cursor: pointer;
+    transform: translateY(0px);
+    overflow: hidden;
     transition: 0.3s ease-in-out;
+}
+.contact .form_holder form .left_side button.button_night{
+    background-color: var(--white);
+    color: var(--primary-color);
 }
 .contact .form_holder form .left_side button:hover{
     transform: translateY(-4px);
@@ -1213,6 +1641,13 @@ nav .navbar_logo{
 .contact .form_holder form .right_side{
     width: 190px;
     display: flex;
+}
+.contact .form_holder form .right_side textarea.input_night{
+    border: 1px solid #fff;
+    color: #fff;
+}
+.contact .form_holder form .right_side textarea.input_night::placeholder{
+    color: #fff;
 }
 .contact .form_holder form .right_side textarea{
     width: 100%;
@@ -1231,12 +1666,13 @@ nav .navbar_logo{
     font-size: 10px;
 }
 .footer{
-    background-color: var(--white);
+    /* background-color: var(--white); */
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 30px 60px 30px 60px;
     transition: 0.3s ease-in-out;
+    overflow: hidden;
 }
 .footer .logo_holder{
     display: flex;
@@ -1254,6 +1690,7 @@ nav .navbar_logo{
     text-transform: capitalize;
     letter-spacing: 4px;
     font-size: 16px;
+    transition: 0.3s ease-in-out;
 }
 .footer ul{
     display: flex;
@@ -1275,6 +1712,7 @@ nav .navbar_logo{
     align-items: center;
     gap: 10px;
     padding: 8px;
+    transition: 0.3s ease-in-out;
 }
 .footer ul li a span{
     font-size: 8px;
@@ -1323,26 +1761,295 @@ nav .navbar_logo{
 .footer .media a span{
     font-size: 13px;
 }
-@media (max-width: 1020px){
+@media (max-width: 1190px){
     nav .navbar_links{
         position: relative;
-        width: 40%;
+        width: 44%;
         display: flex;
         align-items: center;
     }
     nav .navbar_links .burger{
-        display: none;
-    }
-    nav .navbar_links ul{
         display: flex;
         align-items: center;
-        gap: 6px;
+        justify-content: center;
+        background: none;
+        border: none;
+        color: var(--primary-color);
+        font-size: 22px;
+    }
+    nav .navbar_links ul{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: -55%;
+        width: 40%;
+        height: 100%;
+        gap: 40px;
         color: var(--secondary-color);
+        background-color: #e1c4803d;
+        backdrop-filter: blur(8px);
+        transition: 0.5s ease-in-out;
+    }
+    nav .navbar_links ul .close_nav{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary-color);
+        padding: 5px;
+        border: none;
+        background: none;
     }
     nav .navbar_links ul li{
         font-size: 11px;
         font-weight: 120;
         letter-spacing: 1px;
+        color: var(--black);
+        transition: 0.3s ease-in-out;
+    }
+    nav .navbar_links ul li:hover{
+        color: var(--primary-color);
+    }
+    .active{
+        color: var(--primary-color);
+    }
+    nav .navbar_links ul li a{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 4px;
+    }
+    nav .navbar_links ul li a span:first-child{
+        font-size: 7px;
+        transform: translateY(10px);
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+    }
+    nav .navbar_links ul li:hover a span:first-child,
+    nav .navbar_links ul li a.active span:first-child{
+        transform: translateY(0px);
+        opacity: 1;
+        color: var(--primary-color);
+    }
+    nav .navbar_links ul li a span:last-child{
+        font-size: 7px;
+        transform: translateY(-10px);
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+    }
+    nav .navbar_links ul li:hover a span:last-child,
+    nav .navbar_links ul li a.active span:last-child{
+        transform: translateY(0px);
+        opacity: 1;
+        color: var(--primary-color);
+    }
+    nav .navbar_right{
+        position: relative;
+        width: 44%;
+        display: flex;
+        justify-content: end;
+        gap: 15px;
+    }
+    nav .navbar_right .coffee{
+        position: relative;
+        width: 8%;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        border: 1px solid transparent;
+        background: transparent;
+        border-radius:30px;
+        padding: 5px;
+        transform: scale(1);
+        cursor: pointer;
+        overflow: hidden;
+        transition: 0.4s ease-in-out;
+    }
+    nav .navbar_right .coffee:hover{
+        width: 70%;
+        border: 1px solid var(--primary-color);
+    }
+    nav .navbar_right .coffee .hold{
+        position: absolute;
+        display: flex;
+        left: 2px;
+        align-items: center;
+        gap: 10px;
+        pointer-events: none;
+        transition: 0.4s ease-in-out;
+    }
+    nav .navbar_right .coffee i{
+        color: var(--white);
+        background-color: var(--primary-color);
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: 0.3s ease-in-out;
+    }
+    nav .navbar_right .coffee p{
+        font-size: 10px;
+        font-weight: 120;
+        letter-spacing: 1px;
+        color: var(--primary-color);
+        white-space: nowrap;
+        transition: 0.3s ease-in-out;
+    }
+}
+@media (max-width: 1020px){
+    nav .navbar_links{
+        position: relative;
+        width: 44%;
+        display: flex;
+        align-items: center;
+    }
+    nav .navbar_links .burger{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        color: var(--primary-color);
+        font-size: 22px;
+    }
+    nav .navbar_links ul{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: -55%;
+        width: 40%;
+        height: 100%;
+        gap: 40px;
+        color: var(--secondary-color);
+        background-color: #e1c4803d;
+        backdrop-filter: blur(8px);
+        transition: 0.5s ease-in-out;
+    }
+    nav .navbar_links ul .close_nav{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary-color);
+        padding: 5px;
+        border: none;
+        background: none;
+    }
+    nav .navbar_links ul li{
+        font-size: 11px;
+        font-weight: 120;
+        letter-spacing: 1px;
+        color: var(--black);
+        transition: 0.3s ease-in-out;
+    }
+    nav .navbar_links ul li:hover{
+        color: var(--primary-color);
+    }
+    .active{
+        color: var(--primary-color);
+    }
+    nav .navbar_links ul li a{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 4px;
+    }
+    nav .navbar_links ul li a span:first-child{
+        font-size: 7px;
+        transform: translateY(10px);
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+    }
+    nav .navbar_links ul li:hover a span:first-child,
+    nav .navbar_links ul li a.active span:first-child{
+        transform: translateY(0px);
+        opacity: 1;
+        color: var(--primary-color);
+    }
+    nav .navbar_links ul li a span:last-child{
+        font-size: 7px;
+        transform: translateY(-10px);
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+    }
+    nav .navbar_links ul li:hover a span:last-child,
+    nav .navbar_links ul li a.active span:last-child{
+        transform: translateY(0px);
+        opacity: 1;
+        color: var(--primary-color);
+    }
+    nav .navbar_right{
+        position: relative;
+        width: 44%;
+        display: flex;
+        justify-content: end;
+        gap: 15px;
+    }
+    nav .navbar_right .coffee{
+        position: relative;
+        width: 9%;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        border: 1px solid transparent;
+        background: transparent;
+        border-radius:30px;
+        padding: 5px;
+        transform: scale(1);
+        cursor: pointer;
+        overflow: hidden;
+        transition: 0.4s ease-in-out;
+    }
+    nav .navbar_right .coffee:hover{
+        width: 70%;
+        border: 1px solid var(--primary-color);
+    }
+    nav .navbar_right .coffee .hold{
+        position: absolute;
+        display: flex;
+        left: 2px;
+        align-items: center;
+        gap: 10px;
+        pointer-events: none;
+        transition: 0.4s ease-in-out;
+    }
+    nav .navbar_right .coffee i{
+        color: var(--white);
+        background-color: var(--primary-color);
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: 0.3s ease-in-out;
+    }
+    nav .navbar_right .coffee p{
+        font-size: 10px;
+        font-weight: 120;
+        letter-spacing: 1px;
+        color: var(--primary-color);
+        white-space: nowrap;
         transition: 0.3s ease-in-out;
     }
     .contact .texts .info_buttons{
@@ -1553,7 +2260,7 @@ nav .navbar_logo{
     }
     nav .navbar_right .coffee{
         position: relative;
-        width: 12%;
+        width: 10%;
         height: 28px;
         display: flex;
         align-items: center;
@@ -1852,8 +2559,340 @@ nav .navbar_logo{
         justify-content: space-between;
         gap: 20px;
     }
+    .education{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        padding: 80px 0px 80px 0px;
+        /* background-color: var(--white); */
+        z-index: 1;
+        scroll-margin-top: 60px;
+        transition: 0.3s ease-in-out;
+        overflow: hidden;
+    }
+    .education .snippet{
+        font-size: 8px;
+        font-weight: 200;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        border: 1px solid #f0a801;
+        padding: 8px 24px 8px 24px;
+        color: #f0a801;
+        border-radius: 30px;
+    }
+    .education .context{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .education .context h1{
+        font-family: 'italiana';
+        text-transform: capitalize;
+        letter-spacing: 5px;
+        font-size: 30px;
+        font-weight: 300;
+        text-align: center;
+        line-height: 40px;
+        transition: 0.3s ease-in-out;
+    }
+    .education .context P{
+        text-align: center;
+        line-height: 20px;
+        font-weight: 200;
+        font-size: 11px;
+        letter-spacing: 1px;
+        width: 70%;
+        text-transform: capitalize;
+        color: var(--secondary-color);
+    }
+    .education .educate_circle{
+        position: absolute;
+        top: -1380px;
+        border: 1.5px solid rgb(212, 210, 210);
+        border-style: dashed;
+        width: 1800px;
+        height: 1800px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(-90deg);
+        z-index: -1;
+        transition: 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+    }
+    .education .educate_circle .university_card{
+        position: absolute;
+        right: -13.5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        transform: rotate(-90deg);
+    }
+    .education .educate_circle .university_card h1{
+        font-family: 'italiana';
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 22px;
+        letter-spacing: 10px;
+        line-height: 26px;
+        text-align: center;
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+    }
+    .education .educate_circle .university_card p{
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: #999999;
+        transform: translateY(-36px);
+        opacity: 0;
+        transition: 0.4s ease-in-out;
+    }
+    .education .educate_circle .university_card.card_active h1{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .university_card.card_active p{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .university_card .years{
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        letter-spacing: 4px;
+        font-family: 'inter';
+        font-weight: 200;
+        font-size: 10px;
+        background-color: #f0a801;
+        padding: 12px 24px;
+        border-radius: 5px;
+        color: white;
+        overflow: hidden;
+    }
+    .education .educate_circle .university_card .years span{
+        font-size: 8px;
+    }
+    .education .educate_circle .primary_card{
+        position: absolute;
+        left: -13.2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        transform: rotate(90deg);
+    }
+    .education .educate_circle .primary_card h1{
+        font-family: 'italiana';
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 22px;
+        letter-spacing: 10px;
+        text-align: center;
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+    }
+    .education .educate_circle .primary_card p{
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: #999999;
+        transform: translateY(-36px);
+        opacity: 0;
+        transition: 0.4s ease-in-out;
+    }
+    .education .educate_circle .primary_card.card_active h1{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .primary_card.card_active p{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .primary_card .years{
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        letter-spacing: 4px;
+        font-family: 'inter';
+        font-weight: 200;
+        font-size: 10px;
+        background-color: #f0a801;
+        padding: 12px 24px;
+        border-radius: 5px;
+        color: white;
+        overflow: hidden;
+    }
+    .education .educate_circle .primary_card .years span{
+        font-size: 8px;
+    }
+    .education .educate_circle .secondary_card{
+        position: absolute;
+        bottom: -95px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .education .educate_circle .secondary_card h1{
+        font-family: 'italiana';
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 22px;
+        letter-spacing: 10px;
+        text-align: center;
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+    }
+    .education .educate_circle .secondary_card p{
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: #999999;
+        transform: translateY(-36px);
+        opacity: 0;
+        transition: 0.4s ease-in-out;
+    }
+    .education .educate_circle .secondary_card.card_active h1{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .secondary_card.card_active p{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .secondary_card .years{
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        letter-spacing: 4px;
+        font-family: 'inter';
+        font-weight: 200;
+        font-size: 10px;
+        background-color: #f0a801;
+        padding: 12px 24px;
+        border-radius: 5px;
+        color: white;
+        overflow: hidden;
+    }
+    .education .educate_circle .secondary_card .years span{
+        font-size: 8px;
+    }
+    .education .slide_buttons{
+        margin-top: 320px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 60%;
+        gap: 50px;
+    }
+    .education .slide_buttons .button{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .education .slide_buttons .button button{
+        width: 40px;
+        height: 40px;
+        border: none;
+        background-color: #f0a801;
+        box-shadow: 0px 12px 14px -4px #f0a801dd;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+    .education .slide_buttons .button button:hover{
+        transform: translateY(-14px) rotate(15deg);
+    }
+    .education .slide_buttons .button.button_active button{
+        transform: translateY(-14px) rotate(15deg);
+    }
+    .education .slide_buttons .button.button_active p{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .slide_buttons .button p{
+        position: absolute;
+        top: 110%;
+        font-size: 9px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 13px;
+        color: var(--secondary-color);
+        opacity: 0;
+        transform: translateY(-4px);
+        pointer-events: none;
+        transition: 0.2s ease-in-out;
+    }
+    .education .slide_buttons .button:hover p{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .slide_buttons .line{
+        position: relative;
+        width: 60%;
+        height: 1px;
+        border: 1.4px solid #e6e6e6;
+        border-style: dashed;
+    }
+    .education .shapes{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+    }
+    .education .shapes .circle{
+        position: absolute;
+        top: 30%;
+        left: 8%;
+        transform: rotate(-35deg);
+        font-size: 12px;
+        color: #f0a801;
+        transition: 0.3s ease-in-out;
+    }
+    .education .shapes .square{
+        position: absolute;
+        bottom: 24%;
+        right: 22%;
+        transform: rotate(15deg);
+        font-size: 18px;
+        color: #f0a801;
+        transition: 0.3s ease-in-out;
+    }
+    .education .shapes .triangle{
+        position: absolute;
+        top: 10%;
+        right: 18%;
+        transform: rotate(20deg);
+        font-size: 16px;
+        color: #999999;
+        transition: 0.3s ease-in-out;
+    }
 }
-@media (max-width: 620px){
+@media (max-width: 695px){
     .footer{
         background-color: var(--white);
         display: flex;
@@ -2233,6 +3272,677 @@ nav .navbar_logo{
         white-space: nowrap;
         transition: 0.3s ease-in-out;
     }
+    .education{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        padding: 80px 0px 80px 0px;
+        /* background-color: var(--white); */
+        z-index: 1;
+        scroll-margin-top: 60px;
+        transition: 0.3s ease-in-out;
+        overflow: hidden;
+    }
+    .education .snippet{
+        font-size: 8px;
+        font-weight: 200;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        border: 1px solid #f0a801;
+        padding: 8px 24px 8px 24px;
+        color: #f0a801;
+        border-radius: 30px;
+    }
+    .education .context{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .education .context h1{
+        font-family: 'italiana';
+        text-transform: capitalize;
+        letter-spacing: 5px;
+        font-size: 30px;
+        font-weight: 300;
+        text-align: center;
+        line-height: 40px;
+        transition: 0.3s ease-in-out;
+    }
+    .education .context P{
+        text-align: center;
+        line-height: 20px;
+        font-weight: 200;
+        font-size: 11px;
+        letter-spacing: 1px;
+        width: 70%;
+        text-transform: capitalize;
+        color: var(--secondary-color);
+    }
+    .education .educate_circle{
+        position: absolute;
+        top: -1380px;
+        border: 1.5px solid rgb(212, 210, 210);
+        border-style: dashed;
+        width: 1800px;
+        height: 1800px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(-90deg);
+        z-index: -1;
+        transition: 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+    }
+    .education .educate_circle .university_card{
+        position: absolute;
+        right: -13.5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        transform: rotate(-90deg);
+    }
+    .education .educate_circle .university_card h1{
+        font-family: 'italiana';
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 22px;
+        letter-spacing: 10px;
+        line-height: 26px;
+        text-align: center;
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+    }
+    .education .educate_circle .university_card p{
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: #999999;
+        transform: translateY(-36px);
+        opacity: 0;
+        transition: 0.4s ease-in-out;
+    }
+    .education .educate_circle .university_card.card_active h1{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .university_card.card_active p{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .university_card .years{
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        letter-spacing: 4px;
+        font-family: 'inter';
+        font-weight: 200;
+        font-size: 10px;
+        background-color: #f0a801;
+        padding: 12px 24px;
+        border-radius: 5px;
+        color: white;
+        overflow: hidden;
+    }
+    .education .educate_circle .university_card .years span{
+        font-size: 8px;
+    }
+    .education .educate_circle .primary_card{
+        position: absolute;
+        left: -13.2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        transform: rotate(90deg);
+    }
+    .education .educate_circle .primary_card h1{
+        font-family: 'italiana';
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 22px;
+        letter-spacing: 10px;
+        text-align: center;
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+    }
+    .education .educate_circle .primary_card p{
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: #999999;
+        transform: translateY(-36px);
+        opacity: 0;
+        transition: 0.4s ease-in-out;
+    }
+    .education .educate_circle .primary_card.card_active h1{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .primary_card.card_active p{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .primary_card .years{
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        letter-spacing: 4px;
+        font-family: 'inter';
+        font-weight: 200;
+        font-size: 10px;
+        background-color: #f0a801;
+        padding: 12px 24px;
+        border-radius: 5px;
+        color: white;
+        overflow: hidden;
+    }
+    .education .educate_circle .primary_card .years span{
+        font-size: 8px;
+    }
+    .education .educate_circle .secondary_card{
+        position: absolute;
+        bottom: -95px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .education .educate_circle .secondary_card h1{
+        font-family: 'italiana';
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 22px;
+        letter-spacing: 10px;
+        text-align: center;
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+    }
+    .education .educate_circle .secondary_card p{
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: #999999;
+        transform: translateY(-36px);
+        opacity: 0;
+        transition: 0.4s ease-in-out;
+    }
+    .education .educate_circle .secondary_card.card_active h1{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .secondary_card.card_active p{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .secondary_card .years{
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        letter-spacing: 4px;
+        font-family: 'inter';
+        font-weight: 200;
+        font-size: 10px;
+        background-color: #f0a801;
+        padding: 12px 24px;
+        border-radius: 5px;
+        color: white;
+        overflow: hidden;
+    }
+    .education .educate_circle .secondary_card .years span{
+        font-size: 8px;
+    }
+    .education .slide_buttons{
+        margin-top: 320px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 60%;
+        gap: 20px;
+    }
+    .education .slide_buttons .button{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .education .slide_buttons .button button{
+        width: 40px;
+        height: 40px;
+        border: none;
+        background-color: #f0a801;
+        box-shadow: 0px 12px 14px -4px #f0a801dd;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+    .education .slide_buttons .button button:hover{
+        transform: translateY(-14px) rotate(15deg);
+    }
+    .education .slide_buttons .button.button_active button{
+        transform: translateY(-14px) rotate(15deg);
+    }
+    .education .slide_buttons .button.button_active p{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .slide_buttons .button p{
+        position: absolute;
+        top: 110%;
+        font-size: 9px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 13px;
+        color: var(--secondary-color);
+        opacity: 0;
+        transform: translateY(-4px);
+        pointer-events: none;
+        transition: 0.2s ease-in-out;
+    }
+    .education .slide_buttons .button:hover p{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .slide_buttons .line{
+        position: relative;
+        width: 60%;
+        height: 1px;
+        border: 1.4px solid #e6e6e6;
+        border-style: dashed;
+    }
+    .education .shapes{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+    }
+    .education .shapes .circle{
+        position: absolute;
+        top: 30%;
+        left: 8%;
+        transform: rotate(-35deg);
+        font-size: 12px;
+        color: #f0a801;
+        transition: 0.3s ease-in-out;
+    }
+    .education .shapes .square{
+        position: absolute;
+        bottom: 24%;
+        right: 22%;
+        transform: rotate(15deg);
+        font-size: 18px;
+        color: #f0a801;
+        transition: 0.3s ease-in-out;
+    }
+    .education .shapes .triangle{
+        position: absolute;
+        top: 10%;
+        right: 18%;
+        transform: rotate(20deg);
+        font-size: 16px;
+        color: #999999;
+        transition: 0.3s ease-in-out;
+    }
+}
+@media (max-width: 592px){
+    .education{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        padding: 80px 0px 80px 0px;
+        /* background-color: var(--white); */
+        z-index: 1;
+        scroll-margin-top: 60px;
+        transition: 0.3s ease-in-out;
+        overflow: hidden;
+    }
+    .education .snippet{
+        font-size: 8px;
+        font-weight: 200;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        border: 1px solid #f0a801;
+        padding: 8px 24px 8px 24px;
+        color: #f0a801;
+        border-radius: 30px;
+    }
+    .education .context{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .education .context h1{
+        font-family: 'italiana';
+        text-transform: capitalize;
+        letter-spacing: 5px;
+        width: 60%;
+        font-size: 30px;
+        font-weight: 300;
+        text-align: center;
+        line-height: 40px;
+        transition: 0.3s ease-in-out;
+    }
+    .education .context P{
+        text-align: center;
+        line-height: 20px;
+        font-weight: 200;
+        font-size: 11px;
+        letter-spacing: 1px;
+        width: 70%;
+        text-transform: capitalize;
+        color: var(--secondary-color);
+    }
+    .education .educate_circle{
+        position: absolute;
+        top: -1380px;
+        border: 1.5px solid rgb(212, 210, 210);
+        border-style: dashed;
+        width: 1800px;
+        height: 1800px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(-90deg);
+        z-index: -1;
+        transition: 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+    }
+    .education .educate_circle .university_card{
+        position: absolute;
+        right: -12%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        transform: rotate(-90deg);
+    }
+    .education .educate_circle .university_card h1{
+        font-family: 'italiana';
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 16px;
+        letter-spacing: 10px;
+        line-height: 26px;
+        text-align: center;
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+    }
+    .education .educate_circle .university_card p{
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: #999999;
+        transform: translateY(-36px);
+        opacity: 0;
+        font-weight: 200;
+        transition: 0.4s ease-in-out;
+    }
+    .education .educate_circle .university_card.card_active h1{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .university_card.card_active p{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .university_card .years{
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        letter-spacing: 4px;
+        font-family: 'inter';
+        font-weight: 200;
+        font-size: 10px;
+        background-color: #f0a801;
+        padding: 12px 24px;
+        border-radius: 5px;
+        color: white;
+        overflow: hidden;
+    }
+    .education .educate_circle .university_card .years span{
+        font-size: 8px;
+    }
+    .education .educate_circle .primary_card{
+        position: absolute;
+        left: -11.2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        transform: rotate(90deg);
+    }
+    .education .educate_circle .primary_card h1{
+        font-family: 'italiana';
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 16px;
+        letter-spacing: 10px;
+        text-align: center;
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+    }
+    .education .educate_circle .primary_card p{
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: #999999;
+        transform: translateY(-36px);
+        opacity: 0;
+        font-weight: 200;
+        transition: 0.4s ease-in-out;
+    }
+    .education .educate_circle .primary_card.card_active h1{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .primary_card.card_active p{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .primary_card .years{
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        letter-spacing: 4px;
+        font-family: 'inter';
+        font-weight: 200;
+        font-size: 10px;
+        background-color: #f0a801;
+        padding: 12px 24px;
+        border-radius: 5px;
+        color: white;
+        overflow: hidden;
+    }
+    .education .educate_circle .primary_card .years span{
+        font-size: 8px;
+    }
+    .education .educate_circle .secondary_card{
+        position: absolute;
+        bottom: -88.5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .education .educate_circle .secondary_card h1{
+        font-family: 'italiana';
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 16px;
+        letter-spacing: 10px;
+        text-align: center;
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+    }
+    .education .educate_circle .secondary_card p{
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: #999999;
+        transform: translateY(-36px);
+        opacity: 0;
+        font-weight: 200;
+        transition: 0.4s ease-in-out;
+    }
+    .education .educate_circle .secondary_card.card_active h1{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .secondary_card.card_active p{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .secondary_card .years{
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        letter-spacing: 4px;
+        font-family: 'inter';
+        font-weight: 200;
+        font-size: 10px;
+        background-color: #f0a801;
+        padding: 12px 24px;
+        border-radius: 5px;
+        color: white;
+        overflow: hidden;
+    }
+    .education .educate_circle .secondary_card .years span{
+        font-size: 8px;
+    }
+    .education .slide_buttons{
+        margin-top: 260px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 60%;
+        gap: 20px;
+    }
+    .education .slide_buttons .button{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .education .slide_buttons .button button{
+        width: 40px;
+        height: 40px;
+        border: none;
+        background-color: #f0a801;
+        box-shadow: 0px 12px 14px -4px #f0a801dd;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+    .education .slide_buttons .button button:hover{
+        transform: translateY(-14px) rotate(15deg);
+    }
+    .education .slide_buttons .button.button_active button{
+        transform: translateY(-14px) rotate(15deg);
+    }
+    .education .slide_buttons .button.button_active p{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .slide_buttons .button p{
+        position: absolute;
+        top: 110%;
+        font-size: 9px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 13px;
+        color: var(--secondary-color);
+        opacity: 0;
+        transform: translateY(-4px);
+        pointer-events: none;
+        font-weight: 200;
+        transition: 0.2s ease-in-out;
+    }
+    .education .slide_buttons .button:hover p{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .slide_buttons .line{
+        position: relative;
+        width: 60%;
+        height: 1px;
+        border: 1.4px solid #e6e6e6;
+        border-style: dashed;
+    }
+    .education .shapes{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+    }
+    .education .shapes .circle{
+        position: absolute;
+        top: 30%;
+        left: 8%;
+        transform: rotate(-35deg);
+        font-size: 12px;
+        color: #f0a801;
+        transition: 0.3s ease-in-out;
+    }
+    .education .shapes .square{
+        position: absolute;
+        bottom: 24%;
+        right: 22%;
+        transform: rotate(15deg);
+        font-size: 18px;
+        color: #f0a801;
+        transition: 0.3s ease-in-out;
+    }
+    .education .shapes .triangle{
+        position: absolute;
+        top: 10%;
+        right: 18%;
+        transform: rotate(20deg);
+        font-size: 16px;
+        color: #999999;
+        transition: 0.3s ease-in-out;
+    }
 }
 @media (max-width: 420px){
     nav .navbar_right{
@@ -2293,6 +4003,352 @@ nav .navbar_logo{
         letter-spacing: 1px;
         color: var(--white);
         white-space: nowrap;
+        transition: 0.3s ease-in-out;
+    }
+    .education{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        padding: 80px 0px 80px 0px;
+        /* background-color: var(--white); */
+        z-index: 1;
+        scroll-margin-top: 60px;
+        transition: 0.3s ease-in-out;
+        overflow: hidden;
+    }
+    .education .snippet{
+        font-size: 8px;
+        font-weight: 200;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        border: 1px solid #f0a801;
+        padding: 8px 24px 8px 24px;
+        color: #f0a801;
+        border-radius: 30px;
+    }
+    .education .context{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .education .context h1{
+        font-family: 'italiana';
+        text-transform: capitalize;
+        letter-spacing: 5px;
+        width: 60%;
+        font-size: 30px;
+        font-weight: 300;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 40px;
+        transition: 0.3s ease-in-out;
+    }
+    .education .context P{
+        text-align: center;
+        line-height: 20px;
+        font-weight: 200;
+        font-size: 11px;
+        letter-spacing: 1px;
+        width: 70%;
+        text-transform: capitalize;
+        color: var(--secondary-color);
+    }
+    .education .educate_circle{
+        position: absolute;
+        top: -1380px;
+        border: 1.5px solid rgb(212, 210, 210);
+        border-style: dashed;
+        width: 1800px;
+        height: 1800px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(-90deg);
+        z-index: -1;
+        transition: 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+    }
+    .education .educate_circle .university_card{
+        position: absolute;
+        right: -12.6%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        transform: rotate(-90deg);
+    }
+    .education .educate_circle .university_card h1{
+        font-family: 'italiana';
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 16px;
+        letter-spacing: 10px;
+        line-height: 26px;
+        text-align: center;
+        transform: translateY(-20px);
+        width: 60%;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+    }
+    .education .educate_circle .university_card p{
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: #999999;
+        transform: translateY(-36px);
+        opacity: 0;
+        font-weight: 200;
+        transition: 0.4s ease-in-out;
+    }
+    .education .educate_circle .university_card.card_active h1{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .university_card.card_active p{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .university_card .years{
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        letter-spacing: 4px;
+        font-family: 'inter';
+        font-weight: 200;
+        font-size: 10px;
+        background-color: #f0a801;
+        padding: 12px 24px;
+        border-radius: 5px;
+        color: white;
+        overflow: hidden;
+    }
+    .education .educate_circle .university_card .years span{
+        font-size: 8px;
+    }
+    .education .educate_circle .primary_card{
+        position: absolute;
+        left: -12%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        transform: rotate(90deg);
+    }
+    .education .educate_circle .primary_card h1{
+        font-family: 'italiana';
+        text-transform: uppercase;
+        width: 70%;
+        font-weight: 300;
+        font-size: 16px;
+        letter-spacing: 10px;
+        line-height: 24px;
+        text-align: center;
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+    }
+    .education .educate_circle .primary_card p{
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: #999999;
+        transform: translateY(-36px);
+        opacity: 0;
+        font-weight: 200;
+        transition: 0.4s ease-in-out;
+    }
+    .education .educate_circle .primary_card.card_active h1{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .primary_card.card_active p{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .primary_card .years{
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        letter-spacing: 4px;
+        font-family: 'inter';
+        font-weight: 200;
+        font-size: 10px;
+        background-color: #f0a801;
+        padding: 12px 24px;
+        border-radius: 5px;
+        color: white;
+        overflow: hidden;
+    }
+    .education .educate_circle .primary_card .years span{
+        font-size: 8px;
+    }
+    .education .educate_circle .secondary_card{
+        position: absolute;
+        bottom: -88.5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .education .educate_circle .secondary_card h1{
+        font-family: 'italiana';
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 16px;
+        letter-spacing: 10px;
+        text-align: center;
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+    }
+    .education .educate_circle .secondary_card p{
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: #999999;
+        transform: translateY(-36px);
+        opacity: 0;
+        font-weight: 200;
+        transition: 0.4s ease-in-out;
+    }
+    .education .educate_circle .secondary_card.card_active h1{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .secondary_card.card_active p{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .secondary_card .years{
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        letter-spacing: 4px;
+        font-family: 'inter';
+        font-weight: 200;
+        font-size: 10px;
+        background-color: #f0a801;
+        padding: 12px 24px;
+        border-radius: 5px;
+        color: white;
+        overflow: hidden;
+    }
+    .education .educate_circle .secondary_card .years span{
+        font-size: 8px;
+    }
+    .education .slide_buttons{
+        margin-top: 240px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 70%;
+        gap: 20px;
+    }
+    .education .slide_buttons .button{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .education .slide_buttons .button button{
+        width: 30px;
+        height: 30px;
+        border: none;
+        background-color: #f0a801;
+        box-shadow: 0px 12px 14px -4px #f0a801dd;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+    .education .slide_buttons .button button span{
+        font-size: 8px;
+    }
+    .education .slide_buttons .button button:hover{
+        transform: translateY(-14px) rotate(15deg);
+    }
+    .education .slide_buttons .button.button_active button{
+        transform: translateY(-14px) rotate(15deg);
+    }
+    .education .slide_buttons .button.button_active p{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .slide_buttons .button p{
+        position: absolute;
+        top: 110%;
+        font-size: 8px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 13px;
+        color: var(--secondary-color);
+        opacity: 0;
+        transform: translateY(-4px);
+        pointer-events: none;
+        font-weight: 200;
+        transition: 0.2s ease-in-out;
+    }
+    .education .slide_buttons .button:hover p{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .slide_buttons .line{
+        position: relative;
+        width: 60%;
+        height: 1px;
+        border: 1.4px solid #e6e6e6;
+        border-style: dashed;
+    }
+    .education .shapes{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+    }
+    .education .shapes .circle{
+        position: absolute;
+        top: 30%;
+        left: 8%;
+        transform: rotate(-35deg);
+        font-size: 12px;
+        color: #f0a801;
+        transition: 0.3s ease-in-out;
+    }
+    .education .shapes .square{
+        position: absolute;
+        bottom: 24%;
+        right: 22%;
+        transform: rotate(15deg);
+        font-size: 18px;
+        color: #f0a801;
+        transition: 0.3s ease-in-out;
+    }
+    .education .shapes .triangle{
+        position: absolute;
+        top: 10%;
+        right: 18%;
+        transform: rotate(20deg);
+        font-size: 16px;
+        color: #999999;
         transition: 0.3s ease-in-out;
     }
 }
@@ -2405,6 +4461,360 @@ nav .navbar_logo{
         letter-spacing: 1px;
         color: var(--white);
         white-space: nowrap;
+        transition: 0.3s ease-in-out;
+    }
+    .education{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        padding: 80px 0px 80px 0px;
+        z-index: 1;
+        scroll-margin-top: 60px;
+        transition: 0.3s ease-in-out;
+        overflow: hidden;
+    }
+    .education .snippet{
+        font-size: 8px;
+        font-weight: 200;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        border: 1px solid #f0a801;
+        padding: 8px 24px 8px 24px;
+        color: #f0a801;
+        border-radius: 30px;
+    }
+    .education .context{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .education .context h1{
+        font-family: 'italiana';
+        text-transform: capitalize;
+        letter-spacing: 5px;
+        width: 60%;
+        font-size: 30px;
+        font-weight: 300;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 40px;
+        transition: 0.3s ease-in-out;
+    }
+    .education .context P{
+        text-align: center;
+        line-height: 20px;
+        font-weight: 200;
+        font-size: 11px;
+        letter-spacing: 1px;
+        width: 70%;
+        text-transform: capitalize;
+        color: var(--secondary-color);
+    }
+    .education .educate_circle{
+        position: absolute;
+        top: -1380px;
+        border: 1.5px solid rgb(212, 210, 210);
+        border-style: dashed;
+        width: 1800px;
+        height: 1800px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(-90deg);
+        z-index: -1;
+        transition: 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+    }
+    .education .educate_circle .university_card{
+        position: absolute;
+        right: -12.6%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        transform: rotate(-90deg);
+    }
+    .education .educate_circle .university_card h1{
+        font-family: 'italiana';
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 16px;
+        letter-spacing: 10px;
+        line-height: 26px;
+        text-align: center;
+        transform: translateY(-20px);
+        width: 60%;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+    }
+    .education .educate_circle .university_card p{
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: #999999;
+        transform: translateY(-36px);
+        opacity: 0;
+        font-weight: 200;
+        transition: 0.4s ease-in-out;
+    }
+    .education .educate_circle .university_card.card_active h1{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .university_card.card_active p{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .university_card .years{
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        letter-spacing: 4px;
+        font-family: 'inter';
+        font-weight: 200;
+        font-size: 10px;
+        background-color: #f0a801;
+        padding: 12px 24px;
+        border-radius: 5px;
+        color: white;
+        overflow: hidden;
+    }
+    .education .educate_circle .university_card .years span{
+        font-size: 8px;
+    }
+    .education .educate_circle .primary_card{
+        position: absolute;
+        left: -12%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        transform: rotate(90deg);
+    }
+    .education .educate_circle .primary_card h1{
+        font-family: 'italiana';
+        text-transform: uppercase;
+        width: 70%;
+        font-weight: 300;
+        font-size: 16px;
+        letter-spacing: 10px;
+        line-height: 24px;
+        text-align: center;
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+    }
+    .education .educate_circle .primary_card p{
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: #999999;
+        transform: translateY(-36px);
+        opacity: 0;
+        font-weight: 200;
+        transition: 0.4s ease-in-out;
+    }
+    .education .educate_circle .primary_card.card_active h1{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .primary_card.card_active p{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .primary_card .years{
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        letter-spacing: 4px;
+        font-family: 'inter';
+        font-weight: 200;
+        font-size: 10px;
+        background-color: #f0a801;
+        padding: 12px 24px;
+        border-radius: 5px;
+        color: white;
+        overflow: hidden;
+    }
+    .education .educate_circle .primary_card .years span{
+        font-size: 8px;
+    }
+    .education .educate_circle .secondary_card{
+        position: absolute;
+        bottom: -88.5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .education .educate_circle .secondary_card h1{
+        font-family: 'italiana';
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 16px;
+        letter-spacing: 10px;
+        text-align: center;
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+    }
+    .education .educate_circle .secondary_card p{
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: #999999;
+        transform: translateY(-36px);
+        opacity: 0;
+        font-weight: 200;
+        transition: 0.4s ease-in-out;
+    }
+    .education .educate_circle .secondary_card.card_active h1{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .secondary_card.card_active p{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .educate_circle .secondary_card .years{
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        letter-spacing: 4px;
+        font-family: 'inter';
+        font-weight: 200;
+        font-size: 10px;
+        background-color: #f0a801;
+        padding: 12px 24px;
+        border-radius: 5px;
+        color: white;
+        overflow: hidden;
+    }
+    .education .educate_circle .secondary_card .years span{
+        font-size: 8px;
+    }
+    .education .slide_buttons{
+        margin-top: 240px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 70%;
+        gap: 20px;
+    }
+    .education .slide_buttons .button{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .education .slide_buttons .button button{
+        width: 30px;
+        height: 30px;
+        border: none;
+        background-color: #f0a801;
+        box-shadow: 0px 12px 14px -4px #f0a801dd;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+    .education .slide_buttons .button button span{
+        font-size: 8px;
+    }
+    .education .slide_buttons .button button:hover{
+        transform: translateY(-14px) rotate(15deg);
+    }
+    .education .slide_buttons .button.button_active button{
+        transform: translateY(-14px) rotate(15deg);
+    }
+    .education .slide_buttons .button.button_active p{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .slide_buttons .button p{
+        position: absolute;
+        top: 110%;
+        font-size: 8px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 13px;
+        color: var(--secondary-color);
+        opacity: 0;
+        transform: translateY(-4px);
+        pointer-events: none;
+        font-weight: 200;
+        transition: 0.2s ease-in-out;
+    }
+    .education .slide_buttons .button:hover p{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .education .slide_buttons .line{
+        position: relative;
+        width: 60%;
+        height: 1px;
+        border: 1.4px solid #e6e6e6;
+        border-style: dashed;
+    }
+    .education .shapes{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+    }
+    .education .shapes .circle{
+        position: absolute;
+        top: 30%;
+        left: 8%;
+        transform: rotate(-35deg);
+        font-size: 12px;
+        color: #f0a801;
+        transition: 0.3s ease-in-out;
+    }
+    .education .shapes .square{
+        position: absolute;
+        bottom: 24%;
+        right: 22%;
+        transform: rotate(15deg);
+        font-size: 18px;
+        color: #f0a801;
+        transition: 0.3s ease-in-out;
+    }
+    .education .shapes .triangle{
+        position: absolute;
+        top: 3%;
+        right: 18%;
+        transform: rotate(20deg);
+        font-size: 16px;
+        color: #999999;
+        transition: 0.3s ease-in-out;
+    }
+    .content h1{
+        font-family: 'italiana';
+        text-transform: capitalize;
+        font-weight: 300;
+        font-size: 25px;
+        letter-spacing: 10px;
+        text-align: center;
         transition: 0.3s ease-in-out;
     }
 }
